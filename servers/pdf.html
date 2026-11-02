@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PDF Merger - ToolHub</title>
+
+    <link rel="stylesheet" href="/assets/c2.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Tool<span>Hub</span></div>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="/#tools">Tools</a>
+        </nav>
+    </header>
+
+    <main class="pdf-merger">
+
+        <h1>PDF Merger</h1>
+
+        <p>Combine multiple PDF files into one PDF document.</p>
+
+        <div class="pdf-upload-box">
+
+            <input
+                type="file"
+                id="pdfInput"
+                accept=".pdf,application/pdf"
+                multiple
+            >
+
+            <p>Select two or more PDF files.</p>
+
+        </div>
+
+        <div id="pdfFileList"></div>
+
+        <button id="mergeButton">Merge PDF Files</button>
+
+        <div id="pdfResult"></div>
+
+        <a id="downloadLink" hidden>
+            Download Merged PDF
+        </a>
+
+    </main>
+
+    <script src="/assets/pdf.js"></script>
+
+</body>
+</html>

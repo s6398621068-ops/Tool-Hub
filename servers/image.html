@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Image Compressor - ToolHub</title>
+
+    <link rel="stylesheet" href="/assets/c2.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Tool<span>Hub</span></div>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="/#tools">Tools</a>
+        </nav>
+    </header>
+
+    <main class="image-compressor">
+
+        <h1>Image Compressor</h1>
+
+        <p>Reduce image file size while keeping good quality.</p>
+
+        <div class="upload-box">
+
+            <input
+                type="file"
+                id="imageInput"
+                accept="image/*"
+            >
+
+            <p>Select an image from your computer.</p>
+
+        </div>
+
+        <div id="imagePreview"></div>
+
+        <div class="quality-control">
+
+            <label for="quality">Image Quality:</label>
+
+            <input
+                type="range"
+                id="quality"
+                min="10"
+                max="100"
+                value="70"
+            >
+
+            <span id="qualityValue">70%</span>
+
+        </div>
+
+        <button id="compressButton">Compress Image</button>
+
+        <div id="result"></div>
+
+        <button id="downloadButton" hidden>
+            Download Compressed Image
+        </button>
+
+    </main>
+
+    <script src="/assets/image.js"></script>
+
+</body>
+</html>

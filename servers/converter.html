@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Text Case Converter - ToolHub</title>
+
+    <link rel="stylesheet" href="/assets/c2.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Tool<span>Hub</span></div>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="/#tools">Tools</a>
+        </nav>
+    </header>
+
+    <main class="converter">
+
+        <h1>Text Case Converter</h1>
+
+        <p>Convert your text into different letter cases.</p>
+
+        <textarea
+            id="textInput"
+            placeholder="Enter or paste your text here..."
+        ></textarea>
+
+        <div class="converter-buttons">
+
+            <button data-case="upper">UPPERCASE</button>
+
+            <button data-case="lower">lowercase</button>
+
+            <button data-case="title">Title Case</button>
+
+            <button data-case="sentence">Sentence case</button>
+
+        </div>
+
+        <div class="converter-actions">
+
+            <button id="clearButton">Clear Text</button>
+
+            <button id="copyButton">Copy Text</button>
+
+        </div>
+
+    </main>
+
+    <script src="/assets/converter.js"></script>
+
+</body>
+</html>
