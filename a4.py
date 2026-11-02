@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException, UploadFile, File
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse, StreamingResponse
+from fastapi.responses import FileResponse, StreamingResponse, Response
 from pypdf import PdfWriter
 from io import BytesIO
 from pathlib import Path
@@ -109,3 +109,18 @@ async def merge_pdf(files: list[UploadFile] = File(...)):
         writer.close()
         for file in files:
             await file.close()
+
+@app.get("/sitemap.xml")
+def sitemap():
+    xml = """<?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+        <url><loc>https://tool-hub-4718.onrender.com/</loc></url>
+        <url><loc>https://tool-hub-4718.onrender.com/word-counter</loc></url>
+        <url><loc>https://tool-hub-4718.onrender.com/calculator</loc></url>
+        <url><loc>https://tool-hub-4718.onrender.com/converter</loc></url>
+        <url><loc>https://tool-hub-4718.onrender.com/image-compressor</loc></url>
+        <url><loc>https://tool-hub-4718.onrender.com/pdf-merger</loc></url>
+        <url><loc>https://tool-hub-4718.onrender.com/password-generator</loc></url>
+    </urlset>"""
+
+    return Response(content=xml, media_type="application/xml")        
