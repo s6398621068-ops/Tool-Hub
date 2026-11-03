@@ -123,4 +123,13 @@ def sitemap():
         <url><loc>https://tool-hub-4718.onrender.com/password-generator</loc></url>
     </urlset>"""
 
-    return Response(content=xml, media_type="application/xml")        
+    return Response(content=xml, media_type="application/xml")
+
+@app.get("/robots.txt")
+def robots():
+    content = """User-agent: *
+Allow: /
+
+Sitemap: https://tool-hub-4718.onrender.com/sitemap.xml
+"""
+    return Response(content=content, media_type="text/plain")        
